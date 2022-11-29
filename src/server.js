@@ -1,4 +1,4 @@
-import http from "http";
+import https from "http";
 import WebSocket from "ws";
 import express from "express";
 import cons from "consolidate";
@@ -15,7 +15,7 @@ app.get("/*", (_, res) => res.redirect("/"));
 
 const handleListen = () => console.log(`Listening on http://localhost:3000`);
 
-const server = http.createServer(app);
+const server = https.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 function onSocketClose() {
