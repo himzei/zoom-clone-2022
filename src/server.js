@@ -6,7 +6,7 @@ import cons from "consolidate";
 const app = express();
 
 app.engine("html", cons.swig);
-app.set("views", __dirname + "/views");
+app.set("views", process.cwd() + "/src/views");
 app.set("view engine", "html");
 app.use(express.static(__dirname + "/public"));
 
